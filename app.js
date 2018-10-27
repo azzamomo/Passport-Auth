@@ -10,7 +10,7 @@ var passport = require('passport');
 var users = require('./routes/users');
 
 mongoose.connect('mongodb://localhost/credentials', {useNewUrlParser : true});
-var db = mongoose.connect;
+var db = mongoose.connection;
 
 var app = express();
 
