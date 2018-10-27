@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="/css/styles.css" >
+
+		<title>Test App</title>
+	</head>
+
+	<body>
+		<form class="form-card" method="POST" action="submitted">
+			<fieldset class="form-fieldset">
+        		<legend class="form-legend">Formulaire du professeur</legend>
+<!--
+        		<div class="form-radio form-radio-inline">
+            		<div class="form-radio-legend">Sexe</div>
+
+
+            		<label class="form-radio-label">
+                		<input name=Homme class="form-radio-field" type="radio" required value="Homme" />
+                		<i class="form-radio-button"></i>
+                		<span>Homme</span>
+            		</label>
+
+
+            		<label class="form-radio-label">
+                		<input name=Femme class="form-radio-field" type="radio" required value="Femme" />
+                		<i class="form-radio-button"></i>
+                		<span>Femme</span>
+            		</label>
+-->
+            		<!--  Field for prenom-->
+            		<ul>
+            		<% if (typeof errors != 'undefined' ) { %>
+            			<% for(var i = 0; i < errors.length; i++) { %>
+            				<li><%= errors[i].msg %></li>
+            			<% } %>
+            		<% } %>
+            		</ul>
+            		<div class="form-element form-input">
+            			<input id="FieldFirstNameId" class="form-element-field" placeholder="Entrer votre prenom" type="input" name="prenom" />
+            			<div class="form-element-bar"></div>
+            			<label class="form-element-label" for="FieldFirstNameId">Prenom</label>
+        			</div>
+
+        			<!--  Field for nom-->
+            		<div class="form-element form-input">
+            			<input id="FieldLastNameId" class="form-element-field" placeholder="Entrer votre nom" type="input" name="nom" />
+            			<div class="form-element-bar"></div>
+            			<label class="form-element-label" for="FieldLastNameId">Nom</label>
+        			</div>
+
+        			<!--  Field for DOTI-->
+            		<div class="form-element form-input">
+            			<input id="FieldDotiId" class="form-element-field" placeholder="Entrer votre DOTI" type="input" name="doti" />
+            			<div class="form-element-bar"></div>
+            			<label class="form-element-label" for="FieldDotiId">DOTI</label>
+        			</div>
+
+        			<!--  Field for email-->
+            		<div class="form-element form-input">
+            			<input id="FieldEmailId" class="form-element-field" placeholder="Entrer votre émail" type="input" name="email" />
+            			<div class="form-element-bar"></div>
+            			<label class="form-element-label" for="FieldEmailId">émail</label>
+        			</div>
+
+        			<!--  Text area for "Commentaires"-->
+        			<div class="form-element form-textarea">
+            			<textarea id="MessageArea" class="form-element-field" placeholder=" " name="comment"></textarea>
+            			<div class="form-element-bar"></div>
+            			<label class="form-element-label" for="MessageArea">Commentaires</label>
+            		</div>
+            </fieldset>
+            <!--  2 buttons for "Annuler" and "Envoyer"-->
+            <div class="form-actions">
+        		<button class="form-btn" type="submit">Envoyer</button>
+        		<button class="form-btn-cancel -nooutline" type="reset">Annuler</button>
+        	</div>
+        	
+		</form>
+	</body>
+
+	<script src="/js/bootstrap.min.js"></script>
+
+</html>
