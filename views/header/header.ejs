@@ -2,5 +2,8 @@
 	<div class="alert alert-success"><%= success_message %></div>
 <% } %>
 <% if(error_message != '') { %>
-	<div class="alert alert-success"><%= error_message %></div>
+	<div class="alert alert-danger"><%= error_message %></div>
+<% } %>
+<% if (error != '') { %>
+	<div class="alert alert-danger"><%= error %></div>
 <% } %>
